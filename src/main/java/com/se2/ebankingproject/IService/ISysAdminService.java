@@ -1,5 +1,7 @@
 package com.se2.ebankingproject.IService;
 
+import com.se2.ebankingproject.Model.SysAdmin;
+
 public interface ISysAdminService {
-    //Work in progress
+    public SysAdmin getSysAdminById(int sysAdminId);
 }
