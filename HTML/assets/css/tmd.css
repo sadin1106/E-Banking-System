@@ -1,0 +1,22 @@
+.tmd{
+    color: black;
+    text-align: left;
+}
+.align-center-tmd{
+    text-align: center;
+}
+.align-right-tmd{
+    text-align: right;
+}
+
+.hidden{
+    display: none;
+}
+.pad-tmd{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#amount{
+    display: flex;
+}
