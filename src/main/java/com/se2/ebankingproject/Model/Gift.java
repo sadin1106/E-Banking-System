@@ -9,16 +9,6 @@ import javax.persistence.*;
 @PrimaryKeyJoinColumn(name = "giftId")
 public class Gift extends com.se2.ebankingproject.Model.Transaction {
 
-	
-//	@Id
-//	@GeneratedValue(strategy = GenerationType.IDENTITY)
-//	private int giftId;
-	
-//	@ManyToOne(fetch = FetchType.EAGER)
-//	@JoinColumn(name = "fromAccountId", foreignKey = @ForeignKey(name = "fk_fromAccount_gift"))
-//	@JsonIgnoreProperties(value = {"fromGifts", "toGifts"})
-//	private Account fromAccount;
-	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn( name = "toAccountId" , foreignKey = @ForeignKey(name = "fk_toAccount_gift"))
 	@JsonIgnoreProperties(value = {"fromGifts", "toGifts"})

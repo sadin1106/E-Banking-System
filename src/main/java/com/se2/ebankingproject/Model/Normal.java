@@ -10,7 +10,6 @@ import javax.persistence.Table;
 @PrimaryKeyJoinColumn(name = "normalId")
 public class Normal extends Account {
 
-
     @Column
     private String identityCard;
 

@@ -53,7 +53,6 @@ public class Transaction {
 		this.account = account;
 	}
 
-
 	public LocalDateTime getTimeCreated() {
 		return timeCreated;
 	}
