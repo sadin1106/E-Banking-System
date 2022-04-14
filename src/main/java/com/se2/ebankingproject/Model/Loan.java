@@ -10,7 +10,6 @@ import javax.persistence.Table;
 @PrimaryKeyJoinColumn(name = "loanId")
 public class Loan extends InvestType{
 
-
     @Column(nullable = false)
     private double rate;
 

@@ -32,7 +32,6 @@ public class AccountService implements IAccountService {
     @Autowired
     SysAdminRepository sysAdminRepository;
 
-
     @Autowired
     TransactionService transactionService;
 
@@ -65,7 +64,6 @@ public class AccountService implements IAccountService {
         return accountRepository.findAll();
     }
 
-
     @Override
     public String deleteAccountById(int accountId) {
         if (accountRepository.existsById(accountId)) {
@@ -78,7 +76,6 @@ public class AccountService implements IAccountService {
         }
         return "Account " + errorType.isNotExisted(accountId);
     }
-
 
     @Override
     public String addAccount(String account) {
@@ -93,7 +90,6 @@ public class AccountService implements IAccountService {
                     normalService.addNormal(account);
                 }
 
-
                 return errorType.getSuccessful();
             }
 
@@ -101,7 +97,6 @@ public class AccountService implements IAccountService {
         }
         return editAccount(account);
     }
-
 
     @Override
     public String editAccount(String account) {

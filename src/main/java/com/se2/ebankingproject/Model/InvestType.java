@@ -55,7 +55,5 @@ public class InvestType {
 	public void setTimeCreated(LocalDateTime timeCreated) {
 		this.timeCreated = timeCreated;
 	}
-	
-	
-	
+
 }

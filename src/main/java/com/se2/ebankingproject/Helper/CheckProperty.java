@@ -28,13 +28,9 @@ public class CheckProperty {
         for (Field field: type.getDeclaredFields()) {
             fields.add(field);
         }
-
         if (type.getSuperclass() != null) {
 
         }
-
         return fields;
     }
-
-
 }

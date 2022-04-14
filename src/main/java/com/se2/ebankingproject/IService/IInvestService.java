@@ -1,9 +1,7 @@
 package com.se2.ebankingproject.IService;
 
 import com.se2.ebankingproject.Model.InvestType;
-import org.springframework.stereotype.Service;
 
-@Service
 public interface IInvestService {
 
     public InvestType getInvest(int accountId);

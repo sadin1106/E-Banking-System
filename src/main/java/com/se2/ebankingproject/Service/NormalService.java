@@ -72,7 +72,6 @@ public class NormalService implements INormalService {
     public String editNormal(String normal) {
         Gson gson = new GsonBuilder().setDateFormat("dd/MMM/yyyy HH:mm:ss").create();
         Normal nor = gson.fromJson(normal, Normal.class);
-
         if (normalRepository.existsById(nor.getAccountId())) {
             if (checkValidate.getOk(nor)) {
                 Normal fixNor = getNormalById(nor.getAccountId());
@@ -83,8 +82,6 @@ public class NormalService implements INormalService {
                 return errorType.getSuccessful();
             }
         }
-
         return errorType.isNotExisted(nor.getName());
     }
-
 }

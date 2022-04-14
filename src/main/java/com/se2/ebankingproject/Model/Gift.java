@@ -22,5 +22,4 @@ public class Gift extends com.se2.ebankingproject.Model.Transaction {
 		this.toAccount = toAccount;
 	}
 	
-	
 }

@@ -1,11 +1,9 @@
 package com.se2.ebankingproject.IService;
 
 import com.se2.ebankingproject.Model.Transaction;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public interface ITransactionService {
 
     public Transaction getTransactionById(int transactionId);

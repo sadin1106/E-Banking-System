@@ -40,7 +40,6 @@ public class InvestTypeService implements IInvestService {
             return iv;
         }
         return null;
-
     }
 
     @Override
@@ -81,5 +80,4 @@ public class InvestTypeService implements IInvestService {
             return true;
         return false;
     }
-
 }

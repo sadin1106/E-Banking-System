@@ -12,9 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class CheckValidate {
 
-
     private boolean Ok;
-
 
     public boolean getOk(Object obj) {
         ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
@@ -31,5 +29,4 @@ public class CheckValidate {
         }
         return this.Ok;
     }
-
 }

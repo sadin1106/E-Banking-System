@@ -29,7 +29,6 @@ public class SaveController {
     @CrossOrigin(origins = org)
     public String deleteSave(@RequestParam int accountId) {
         return saveService.deleteSave(accountId);
-
     }
 
     @PutMapping(value = "/save/editSave")

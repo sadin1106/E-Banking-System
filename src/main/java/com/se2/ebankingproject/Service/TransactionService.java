@@ -67,7 +67,6 @@ public class TransactionService implements ITransactionService {
             return editTransaction(transaction);
         }
         return "Account" + errorType.isNotExisted(tran.getAccount().getAccountId());
-
     }
 
     @Override
@@ -110,7 +109,4 @@ public class TransactionService implements ITransactionService {
         }
         return trans;
     }
-
-
-
 }

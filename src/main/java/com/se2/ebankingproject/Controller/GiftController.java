@@ -51,4 +51,5 @@ public class GiftController {
     public String deleteGiftById(@RequestParam int giftId) {
         return giftService.deleteGiftById(giftId);
     }
+
 }

@@ -34,7 +34,6 @@ public class SaveService implements ISaveService {
 
     @Override
     public Save getSave(int accountId) {
-
         if (investService.isEmpty(accountId)) {
             return null;
         } else {
@@ -54,7 +53,6 @@ public class SaveService implements ISaveService {
         if (!accountRepository.existsById(sa.getAccount().getAccountId())) {
             return errorType.isNotExisted("Account ");
         }
-
         if (investService.isEmpty(sa.getAccount().getAccountId())) {
             if (checkValidate.getOk(sa)) {
                 saveRepository.save(sa);
@@ -62,8 +60,6 @@ public class SaveService implements ISaveService {
             }
             return errorType.isValidated(sa.getInvestTypeId());
         }
-
-
         return errorType.isExisted(sa.getClass().getSimpleName());
     }
 
@@ -88,7 +84,6 @@ public class SaveService implements ISaveService {
         if (isEmpty(sa.getAccount().getAccountId())) {
             return errorType.isNotExisted("save");
         } else {
-
             if (checkValidate.getOk(sa)) {
                 Save saveCurrent = getSave(sa.getAccount().getAccountId());
                 if (sa.getAmount() != saveCurrent.getAmount())
@@ -113,6 +108,5 @@ public class SaveService implements ISaveService {
             return false;
         }
         return true;
-
     }
 }

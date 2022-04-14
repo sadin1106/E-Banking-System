@@ -67,7 +67,6 @@ public class LoanService implements ILoanService {
     public String deleteLoan(int accountId) {
         if (investService.isEmpty(accountId)) {
             return errorType.isNotExisted("loan");
-
         }
         Loan loan = getLoan(accountId);
         if (loan.getAmount() == 0) {
@@ -75,7 +74,6 @@ public class LoanService implements ILoanService {
             return errorType.getSuccessful();
         }
         return errorType.getFail("loan ammount is not equal 0");
-
     }
 
     @Override
@@ -85,7 +83,6 @@ public class LoanService implements ILoanService {
         if (isEmpty(lo.getAccount().getAccountId())) {
             return errorType.isNotExisted("loan");
         } else {
-
             if (checkValidate.getOk(lo)) {
                 Loan loanCurrent = getLoan(lo.getAccount().getAccountId());
                 if (lo.getAmount() != loanCurrent.getAmount())
@@ -111,5 +108,4 @@ public class LoanService implements ILoanService {
         }
         return true;
     }
-
 }

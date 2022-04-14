@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class ErrorType {
 
-
     public String getSuccessful() {
         return  "Successful";
     };
@@ -26,7 +25,6 @@ public class ErrorType {
     {
         return nameObject + " is validated";
     }
-
 
     public String isExisted(int objectId) {
         return objectId +  " is Existed";

@@ -1,11 +1,9 @@
 package com.se2.ebankingproject.IService;
 
 import com.se2.ebankingproject.Model.Account;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public interface IAccountService {
 
     public Account findById(int accountId) ;

@@ -61,7 +61,6 @@ public class Account {
 	@JsonIgnoreProperties(value = "account")
 	private InvestType investType;
 
-
 	@OneToMany(mappedBy = "account")
 	@JsonIgnoreProperties(value = {"account", "toAccount"})
 	private List<Transaction> transactions;

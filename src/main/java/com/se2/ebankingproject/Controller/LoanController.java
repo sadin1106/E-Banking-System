@@ -35,4 +35,5 @@ public class LoanController {
     public String editLoan(@RequestBody String loan) {
         return loanService.editLoan(loan);
     }
+
 }

@@ -11,4 +11,5 @@ public class InvestTypeController {
 
     @Autowired
     InvestTypeService investTypeService;
+
 }
