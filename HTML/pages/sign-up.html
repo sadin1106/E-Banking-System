@@ -89,6 +89,14 @@
                       </div>
                       <input style="border-radius: 5px; margin-left: 220px;" type="date" name="dob" id="date" required>
                     </div>
+                    <div class="input-group mb-3">
+                      <div class="col col-md-3">
+                        <label class="form-label">Role:</label>
+                      </div>
+                        <div class="form-check ps-0 ms-auto my-auto">
+                          <input class="form-check-input" type="radio" id="radio1" name="role" value="User" checked>  User
+                        </div>
+                    </div>
                     <div class="form-check form-check-info text-start ps-0">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
                       <label class="form-check-label" for="flexCheckDefault">
@@ -96,7 +104,7 @@
                       </label>
                     </div>
                     <div class="text-center">
-                      <button type="button" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">Sign Up</button>
+                      <button id="submitBtn" type="button" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">Sign Up</button>
                     </div>
                   </form>
                 </div>
@@ -131,6 +139,55 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/material-dashboard.min.js?v=3.0.2"></script>
+  <script>
+    document.querySelector('#submitBtn').addEventListener("click", async () => {
+        var isAllowed = true
+        var regUserName = document.getElementById('name').value
+        var regPhoneNumber = document.getElementById('phoneNumber').value
+        await fetch(`http://localhost:8000/account/getAllAccounts`, {
+                method: 'GET'
+            }).then(r =>
+                r.json()
+            )
+            .then(res => {
+                res.forEach(element => {                        
+                    if (regUserName === element.userName || regPhoneNumber === element
+                        .phoneNumber) {
+                        isAllowed = false
+                    }
+                });
+            })
+        if (isAllowed) {
+            var role = document.getElementsByName('role');
+            var accountRole;
+            for (i = 0; i < role.length; i++) {
+                if (role[i].checked)
+                    accountRole = role[i].value
+            }
+            if (accountRole === 'User') {
+                await fetch(`http://localhost:8000/account/addAccount`, {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            userName: document.getElementById('userName').value,
+                            name: document.getElementById('name').value,
+                            password: document.getElementById('password').value,
+                            phoneNumber: document.getElementById('phoneNumber').value,
+                            balance: 0,
+                            dateOfBirth: document.getElementById('date').value,
+                            role: null,
+                            avatar: "images/user.jpg"
+                        })
+                    })
+                    .then(r => {r.json()})
+                    .then(res => {
+                        window.location.href = '/login.html'
+                    })
+            }
+        } else {
+            alert("username or phoneNumber are already registered")
+        }
+    })
+</script>
 </body>
 
 </html>
