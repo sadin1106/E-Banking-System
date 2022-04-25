@@ -1,0 +1,650 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Maze Bank SEA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
+    <!-- <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png"> -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="assets/css/lib/datatable/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/tmd.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+
+</head>
+
+<body>
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="menu-title">Maze Bank SEA</li>
+                    <li><a href="/homepage_user.html"> <i class="menu-icon fa fa-home"></i>Home
+                        </a></li>
+                    <li class="menu-item-has-children dropdown"><a href="#" class="dropdown-toggle"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i
+                                class="menu-icon fa fa-cogs"></i>User Service
+                        </a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-bars"></i><a href="/transaction_user.html">User Transaction List</a>                          
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown hidden" id="menu_admin"><a href="#"
+                            class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="menu-icon fa fa-laptop"></i>Admin Menu
+                        </a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-archive"></i><a href="/transaction_admin.html">Transaction List</a></li>
+                            <li><i class="fa fa-users"></i><a href="/account_list_admin.html">Account List</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+            <div class="top-left">
+                <div class="navbar-header">
+                    <a class="navbar-brand"><img src="images/logoMaZe.png" alt="Logo"></a>
+                    <!-- <a class="navbar-brand hidden" ><img src="images/logo2.png" alt="Logo"></a> -->
+                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="header-menu">
+                    <div class="header-left">
+                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+                        <div class="form-inline">
+                            <form class="search-form">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..."
+                                    aria-label="Search">
+                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                            </form>
+                        </div>
+
+                        <!-- <div class="dropdown for-notification">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="notification"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-bell"></i>
+                                <span class="count bg-danger">3</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="notification">
+                                <p class="red">You have 3 Notification</p>
+                                <a class="dropdown-item media" href="#">
+                                    <i class="fa fa-check"></i>
+                                    <p>Server #1 overloaded.</p>
+                                </a>
+                                <a class="dropdown-item media" href="#">
+                                    <i class="fa fa-info"></i>
+                                    <p>Server #2 overloaded.</p>
+                                </a>
+                                <a class="dropdown-item media" href="#">
+                                    <i class="fa fa-warning"></i>
+                                    <p>Server #3 overloaded.</p>
+                                </a>
+                            </div>
+                        </div> -->
+
+                    </div>
+
+                    <div class="user-area dropdown float-right">
+                        <a class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="images/realAdmin.png" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="/edit_profile_user.html"><i class="fa fa-user"></i>Edit
+                                Profile</a>
+
+                            <a class="nav-link" href="/login.html"><i class="fa fa-power-off"></i>Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="animated fadeIn">
+                <div class="col-md-12">
+                    <div class="card-body card-block">
+                        <div class="row">
+                            <div class="col">
+                                <div class="feed-box text-center">
+                                    <section class="card">
+                                        <div class="card-body">
+                                            <div class="corner-ribon blue-ribon">
+                                                <i class="fa fa-twitter"></i>
+                                            </div>
+                                            <a>
+                                                <img class="align-self-center rounded-circle mr-3"
+                                                    style="width:85px; height:85px;" id="ava" alt=""
+                                                    src="images/user.png">
+                                            </a>
+                                            <h2 id="name">Name</h2>
+                                            <p id="bio">Bio</p>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3 tmd"><label class=" form-control-label">Time
+                                                        Created:</label></div>
+                                                <div class="col-12 col-md-9">
+                                                    <p class="form-control-static" id="timeCreated">10/3/2022</p>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3 tmd"><label class=" form-control-label">Date Of
+                                                        Birth:</label></div>
+                                                <div class="col-12 col-md-9">
+                                                    <p class="form-control-static" id="dob">17/08/2000</p>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3 tmd"><label
+                                                        class=" form-control-label">Balance:</label></div>
+                                                <div class="col-12 col-md-9">
+                                                    <p class="form-control-static" id="balance">1000000000000</p>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3 tmd"><label class=" form-control-label">Phone
+                                                        Number:</label></div>
+                                                <div class="col-12 col-md-9">
+                                                    <p class="form-control-static" id="phoneNumber">0987654321</p>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3 tmd"><label
+                                                        class=" form-control-label">Role:</label></div>
+                                                <div class="col-12 col-md-9">
+                                                    <p class="form-control-static" id="role">User</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>Exchange Tab</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="custom-tab">
+                                            <nav>
+                                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                    <a class="nav-item nav-link active" id="custom-nav-home-tab"
+                                                        data-toggle="tab" href="#custom-nav-home" role="tab"
+                                                        aria-controls="custom-nav-home"
+                                                        aria-selected="true">Withdraw</a>
+                                                    <a class="nav-item nav-link" id="custom-nav-profile-tab"
+                                                        data-toggle="tab" href="#custom-nav-profile" role="tab"
+                                                        aria-controls="custom-nav-profile"
+                                                        aria-selected="false">Deposit</a>
+                                                    <a class="nav-item nav-link" id="custom-nav-contact-tab"
+                                                        data-toggle="tab" href="#custom-nav-contact" role="tab"
+                                                        aria-controls="custom-nav-contact"
+                                                        aria-selected="false">Transfer</a>
+                                                </div>
+                                            </nav>
+                                            <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                                                <div class="tab-pane fade show active" id="custom-nav-home"
+                                                    role="tabpanel" aria-labelledby="custom-nav-home-tab">
+                                                    <form class="form-horizontal card-body card-block" id="myForm1">
+                                                        <div class="row form-group">
+                                                            <div class="col col-md-3 tmd"><label
+                                                                    class=" form-control-label">Withdrawable
+                                                                    money:</label></div>
+                                                            <div class="col-12 col-md-9">
+                                                                <p class="form-control-static" id="withdraw_amount">
+                                                                    Balance - 50k</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col col-md-3"><label for="withdraw"
+                                                                    class=" form-control-label">Withdraw (x.000
+                                                                    VND):</label></div>
+                                                            <div class="col-12 col-md-9"><input type="number"
+                                                                    id="withdraw" name="withdraw" placeholder="Min: 1"
+                                                                    class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    <p class="align-center-tmd">
+                                                        <button class="btn btn-danger" id="submitBtn1">
+                                                            <i class="fa fa-dot-circle-o"></i> Submit
+                                                        </button>
+                                                    </p>
+
+                                                </div>
+                                                <div class="tab-pane fade" id="custom-nav-profile" role="tabpanel"
+                                                    aria-labelledby="custom-nav-profile-tab">
+                                                    <form class="form-horizontal card-body card-block" id="myForm2">
+                                                        <div class="row form-group">
+                                                            <div class="col col-md-3 tmd"><label
+                                                                    class=" form-control-label">Current Balance:</label>
+                                                            </div>
+                                                            <div class="col-12 col-md-9">
+                                                                <p class="form-control-static" id="c_balance">Balance
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col col-md-3"><label for="deposit"
+                                                                    class=" form-control-label">Deposit (x.000
+                                                                    VND):</label></div>
+                                                            <div class="col-12 col-md-9"><input type="number"
+                                                                    id="deposit" name="deposit"
+                                                                    placeholder="Min of 1.000" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    <p class="align-center-tmd">
+                                                        <button class="btn btn-success" id="submitBtn2">
+                                                            <i class="fa fa-dot-circle-o"></i> Submit
+                                                        </button>
+                                                    </p>
+
+                                                </div>
+                                                <div class="tab-pane fade" id="custom-nav-contact" role="tabpanel"
+                                                    aria-labelledby="custom-nav-contact-tab">
+                                                    <form class="form-horizontal card-body card-block" id="myForm3">
+                                                        <div class="row form-group">
+                                                            <div class="col col-md-3 tmd"><label
+                                                                    class=" form-control-label">Transferable
+                                                                    money:</label></div>
+                                                            <div class="col-12 col-md-9">
+                                                                <p class="form-control-static" id="transfer_ammount">
+                                                                    Balance - 50k</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col col-md-3"><label for="saveRate"
+                                                                    class=" form-control-label">Receiver phone
+                                                                    number:</label></div>
+                                                            <div class="col-12 col-md-9"><input type="text"
+                                                                    id="receiver" name="receiver"
+                                                                    placeholder="0987654321" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col col-md-3"><label for="saveRate"
+                                                                    class=" form-control-label">Transfer
+                                                                    Ammount:</label></div>
+                                                            <div class="col-12 col-md-9"><input type="number"
+                                                                    id="transfer" name="transfer"
+                                                                    placeholder="Min of 1.000" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    <p class="align-center-tmd">
+                                                        <button class="btn btn-success" id="submitBtn3">
+                                                            <i class="fa fa-dot-circle-o"></i> Submit
+                                                        </button>
+                                                    </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>Statistic</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="custom-tab">
+                                        <nav>
+                                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                <a class="nav-item nav-link active" id="custom-nav-save-tab"
+                                                    data-toggle="tab" href="#custom-nav-save" role="tab"
+                                                    aria-controls="custom-nav-save" aria-selected="false">Saving</a>
+                                                <a class="nav-item nav-link" id="custom-nav-loan-tab" data-toggle="tab"
+                                                    href="#custom-nav-loan" role="tab" aria-controls="custom-nav-loan"
+                                                    aria-selected="false">Loan</a>
+                                            </div>
+                                        </nav>
+                                        <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                                            <div class="tab-pane fade show active" id="custom-nav-save" role="tabpanel"
+                                                aria-labelledby="custom-nav-save-tab">
+                                                <div id="save_board">
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3 tmd"><label
+                                                                class=" form-control-label">Savings:</label></div>
+                                                        <div class="col-12 col-md-9">
+                                                            <p class="form-control-static" id="save_balance">Balance</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3 tmd"><label
+                                                                class=" form-control-label">Current Interest
+                                                                rate:</label>
+                                                        </div>
+                                                        <div class="col-12 col-md-9">
+                                                            <p class="form-control-static" id="save_rate">100%</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3 tmd"><label
+                                                                class=" form-control-label">Term:</label>
+                                                        </div>
+                                                        <div class="col-12 col-md-9">
+                                                            <p class="form-control-static" id="save_term">Computing</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3 tmd"><label
+                                                                class=" form-control-label">Time Created:</label>
+                                                        </div>
+                                                        <div class="col-12 col-md-9">
+                                                            <p class="form-control-static" id="save_earn">Computing</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row form-group hidden" id="save_hidden_display">
+                                                    <div class="col col-md-12 tmd"><label
+                                                            class=" form-control-label">Your account is not a saving
+                                                            account</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="custom-nav-loan" role="tabpanel"
+                                                aria-labelledby="custom-nav-loan-tab">
+                                                <div id="loan_board">
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3 tmd"><label
+                                                                class=" form-control-label">Loan Amount:</label></div>
+                                                        <div class="col-12 col-md-9">
+                                                            <p class="form-control-static" id="loan_balance"> - Balance
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3 tmd"><label
+                                                                class=" form-control-label">Loan Interest rate:</label>
+                                                        </div>
+                                                        <div class="col-12 col-md-9">
+                                                            <p class="form-control-static" id="loan_rate">100%</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3 tmd"><label
+                                                                class=" form-control-label">Term:</label>
+                                                        </div>
+                                                        <div class="col-12 col-md-9">
+                                                            <p class="form-control-static" id="loan_term">Computing</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3 tmd"><label
+                                                                class=" form-control-label">Time Created:</label>
+                                                        </div>
+                                                        <div class="col-12 col-md-9">
+                                                            <p class="form-control-static" id="loan_earn">Computing</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group hidden" id="loan_hidden_display">
+                                                    <div class="col col-md-12 tmd"><label
+                                                            class=" form-control-label">Your account is not a loaning
+                                                            account</label></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ">
+                            <section class="card">
+                                <div class="card-header">
+                                    <h4>New Function</h4>
+                                </div>
+                                <br>
+                                <div class="col-lg-12">
+                                    <div class="row form-group">
+                                        <div class="col-lg-8 ">
+                                                 We are currently using your money to develop a new function<div class="col-lg-3 btn btn-danger text-center" ><a href="https://youtu.be/dQw4w9WgXcQ">CLICK HERE</a></div> for more information
+                                        </div>
+
+                                </div>
+
+                        </div>
+                    </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div><!-- .animated -->
+    </div><!-- .content -->
+
+
+    <div class="clearfix"></div>
+
+    <footer class="site-footer">
+        <div class="footer-inner bg-white">
+            <div class="row">
+                <div class="col-sm-6">
+                    Copyright &copy; 2022 Gooses Co.
+                </div>
+                <div class="col-sm-6 text-right">
+                    Designed by <a href="https://colorlib.com">Colorlib</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div><!-- /#right-panel -->
+
+    <!-- Right Panel -->
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="assets/js/lib/data-table/datatables.min.js"></script>
+    <script src="assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+    <script src="assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
+    <script src="assets/js/lib/data-table/jszip.min.js"></script>
+    <script src="assets/js/lib/data-table/vfs_fonts.js"></script>
+    <script src="assets/js/lib/data-table/buttons.html5.min.js"></script>
+    <script src="assets/js/lib/data-table/buttons.print.min.js"></script>
+    <script src="assets/js/lib/data-table/buttons.colVis.min.js"></script>
+    <script src="assets/js/init/datatables-init.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#bootstrap-data-table-export').DataTable();
+        });
+    </script>
+    <script>
+        //not test yet
+        //get only
+
+        async function getJson() {
+            const uid = localStorage.getItem('accountId')
+            const response = await fetch('http://localhost:8000/account/getAccountById/?accountId=' + uid, {
+                method: 'GET'
+            })
+            const json = await response.json()
+            document.getElementById('ava').src = "images/realAdmin.png"
+            document.getElementById('name').innerHTML = json.name
+            document.getElementById('bio').innerHTML = json.bio
+            document.getElementById('timeCreated').innerHTML = json.timeCreated
+            document.getElementById('dob').innerHTML = json.dateOfBirth
+            document.getElementById('phoneNumber').innerHTML = json.phoneNumber
+            document.getElementById('balance').innerHTML = json.balance
+            document.getElementById('role').innerHTML = json.role
+            document.getElementById('c_balance').innerHTML = json.balance
+            if (json.balance <= 50) {
+                document.getElementById('withdraw_amount').innerHTML = 0
+                document.getElementById('transfer_ammount').innerHTML = 0
+            } else {
+                document.getElementById('withdraw_amount').innerHTML = json.balance - 50
+                document.getElementById('transfer_ammount').innerHTML = json.balance - 50
+            }
+
+            const response1 = await fetch('http://localhost:8000/save/getSave/?accountId=' + uid, {
+                method: 'GET'
+            })
+            const res1 = await response1.json().then(res => {
+                document.getElementById('save_balance').innerHTML = res.amount
+                document.getElementById('save_rate').innerHTML = res.rate
+                document.getElementById('save_term').innerHTML = res.duration + " months"
+                document.getElementById('save_earn').innerHTML = res.timeCreated
+            }).catch(err => {
+                console.log("123");
+                document.getElementById('save_board').classList.add('hidden'),
+                    document.getElementById('save_hidden_display').classList.remove('hidden')
+            })
+
+            const response2 = await fetch('http://localhost:8000/loan/getLoan/?accountId=' + uid, {
+                method: 'GET'
+            })
+            const res2 = await response2.json().then(res => {
+                console.log(res);
+                document.getElementById('loan_balance').innerHTML = res.amount
+                document.getElementById('loan_rate').innerHTML = res.rate
+                document.getElementById('loan_term').innerHTML = res.duration + " months"
+                document.getElementById('loan_earn').innerHTML = res.timeCreated
+            }).catch(err => {
+                console.log("123");
+                document.getElementById('loan_board').classList.add('hidden')
+                document.getElementById('loan_hidden_display').classList.remove('hidden')
+            })   
+        }
+        getJson()
+    </script>
+    <script>
+        //post only        
+        document.querySelector('#submitBtn1').addEventListener("click", async () => {
+            await fetch(`http://localhost:8000/transaction/addGift`, {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        amount: document.getElementById('withdraw').value,
+                        account: {
+                            accountId: localStorage.getItem('accountId')
+                        },
+                        toAccount: {
+                            accountId: 5
+                        }
+                    })
+                }).then(r => {
+                        r.json()
+                    }
+
+                )
+                .then(res => {
+                    window.location.href = "/homepage_user.html";
+                })
+        })
+        document.querySelector('#submitBtn2').addEventListener("click", async () => {
+            await fetch(`http://localhost:8000/transaction/addGift`, {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        amount: document.getElementById('deposit').value,
+                        account: {
+                            accountId: 5
+                        },
+                        toAccount: {
+                            accountId: localStorage.getItem('accountId')
+                        }
+                    })
+                }).then(r => {
+                        r.json()
+                    }
+
+                )
+                .then(res => {
+                    window.location.href = "/homepage_user.html";
+                })
+        })
+        document.querySelector('#submitBtn3').addEventListener("click", async () => {
+            const response3 = await fetch(
+                'http://localhost:8000/account/getAccountByPhoneNumber/?phoneNumber=' +
+                document.getElementById('receiver').value, {
+                    method: 'GET'
+                })
+            const jsonPhone = await response3.json()
+            console.log(localStorage.getItem('accountId'));
+            await fetch(`http://localhost:8000/transaction/addGift`, {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        amount: document.getElementById('transfer').value,
+                        account: {
+                            accountId: localStorage.getItem('accountId')
+                        },
+                        toAccount: {
+                            accountId: jsonPhone.accountId
+                        }
+                    })
+                }).then(r => {
+                        r.json()
+                    }
+
+                )
+                .then(res => {
+                    window.location.href = "/homepage_user.html";
+                })
+        })
+    </script>
+
+    <script>
+        async function menu() {
+            var uid = localStorage.getItem("accountId")
+            const response = await fetch('http://localhost:8000/account/getAccountById/?accountId=' + uid, {
+                method: 'GET'
+            })
+            const jsonAcc = await response.json()
+            console.log(document.querySelector('#menu_admin'));
+            if (jsonAcc.role === "admin") {
+                document.querySelector('#menu_admin').classList.remove('hidden')
+            } 
+        }
+        menu()
+    </script>
+</body>
+
+</html>
