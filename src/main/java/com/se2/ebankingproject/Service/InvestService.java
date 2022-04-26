@@ -1,8 +1,8 @@
-package com.se2.ebankingproject.IService;
+package com.se2.ebankingproject.Service;
 
 import com.se2.ebankingproject.Model.InvestType;
 
-public interface IInvestService {
+public interface InvestService {
 
     public InvestType getInvest(int accountId);
 

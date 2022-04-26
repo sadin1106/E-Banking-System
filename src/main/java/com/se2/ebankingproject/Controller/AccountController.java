@@ -1,6 +1,6 @@
 package com.se2.ebankingproject.Controller;
 
-import com.se2.ebankingproject.IService.IAccountService;
+import com.se2.ebankingproject.Service.AccountService;
 import com.se2.ebankingproject.Model.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +12,7 @@ public class AccountController {
     final String org = "http://127.0.0.1:5500"; //Visual Studio Live Server
 
     @Autowired
-    IAccountService accountService;
+    AccountService accountService;
 
     @PostMapping(value = "/account/addAccount")
     @CrossOrigin(origins = org)

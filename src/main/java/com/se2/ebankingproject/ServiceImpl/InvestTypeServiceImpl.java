@@ -1,10 +1,10 @@
-package com.se2.ebankingproject.Service;
+package com.se2.ebankingproject.ServiceImpl;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.se2.ebankingproject.Helper.CheckValidate;
 import com.se2.ebankingproject.Helper.ErrorType;
-import com.se2.ebankingproject.IService.IInvestService;
+import com.se2.ebankingproject.Service.InvestService;
 import com.se2.ebankingproject.Model.Account;
 import com.se2.ebankingproject.Model.InvestType;
 import com.se2.ebankingproject.Repository.AccountRepository;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 
 @Service
-public class InvestTypeService implements IInvestService {
+public class InvestTypeServiceImpl implements InvestService {
 
     @Autowired
     ErrorType errorType;
@@ -24,7 +24,7 @@ public class InvestTypeService implements IInvestService {
     CheckValidate checkValidate;
 
     @Autowired
-    AccountService accountService;
+    AccountServiceImpl accountServiceImpl;
 
     @Autowired
     AccountRepository accountRepository;
