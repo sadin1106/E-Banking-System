@@ -1,6 +1,6 @@
 package com.se2.ebankingproject.Controller;
 
-import com.se2.ebankingproject.ServiceImpl.InvestTypeServiceImpl;
+import com.se2.ebankingproject.Service.InvestTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class InvestTypeController {
 
     @Autowired
-    InvestTypeServiceImpl investTypeServiceImpl;
+    InvestTypeService investTypeService;
 
 }
