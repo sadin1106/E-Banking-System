@@ -114,14 +114,6 @@
             <version>8.0.23</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.jboss.weld.servlet/weld-servlet -->
-        <dependency>
-            <groupId>org.jboss.weld.servlet</groupId>
-            <artifactId>weld-servlet</artifactId>
-            <version>3.0.0.Alpha1</version>
-        </dependency>
-
-
 
     </dependencies>
 
